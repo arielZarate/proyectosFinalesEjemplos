@@ -1,0 +1,13 @@
+
+- Firebase
+- Node
+- React
+- Redux
+- Styled Components
+- MaterialUI
+- CSS
+- SweetAlert
+- EmailJS
+- MercadoPago
+- Positionstack+PigeonMaps
+- WhatsAppAPI
