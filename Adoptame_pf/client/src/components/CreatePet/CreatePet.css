@@ -1,0 +1,35 @@
+.formFlexItem{
+  display: "inline-flex";
+  justify-content: center;
+  align-items: center;
+}
+.containerGral{
+    margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+        width: 1300px;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+}
+
+
+.containerForm{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 10px 15px;
+            margin-top: 8em;
+            border-radius: 8px;
+            /* border: 1px solid #000; */
+}
+
+.container1ros2{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: flex-end;
+}

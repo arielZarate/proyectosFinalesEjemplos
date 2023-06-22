@@ -17,6 +17,8 @@ export function CreatePets() {
     const [image, setImage] = useState('');
     const [loading, setLoading] = useState(false);
 
+
+    //image
     const uploadImage = async (e) => {
         const files = e.target.files;
         const data = new FormData();

@@ -5,20 +5,24 @@ import { Button, Typography } from "@mui/material";
 
 import { Box } from "@mui/system";
 import PasswordInput from "./input/PasswordInput";
+import EmailInput from "./input/EmailInput";
 import { Alert } from "@mui/material";
 import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { useDispatch } from "react-redux";
 
-import EmailInput from "./input/EmailInput";
+
 import { loginUser } from "../../../Redux/Thunks/loginUsers";
 
 function FormLogin({ handleChange, handleBlur, handleSubmits, form, errors }) {
+
+  //ver bien coio trabaja esto
   const mode = useSelector((store) => store.theme.mode);
   const theme = useSelector((store) => store.theme);
   const dispatch = useDispatch();
   const clientId =
     "797157267486-rvkpojtcmll1q3n7slbtu09fe4heo7ol.apps.googleusercontent.com";
+    //useEffect
   useEffect(() => {
     const start = () => {
       gapi.auth2.init({
@@ -28,6 +32,8 @@ function FormLogin({ handleChange, handleBlur, handleSubmits, form, errors }) {
     gapi.load("client:auth2", start);
   }, []);
 
+
+  //si es succes el google 
   const responseGooglesuccess = (response) => {
     const Token = response.accessToken;
     const formGoogle = {};
@@ -40,11 +46,17 @@ function FormLogin({ handleChange, handleBlur, handleSubmits, form, errors }) {
     formGoogle.password = response.Ca;
     formGoogle.country = "Google";
     formGoogle.birthday = "1998-01-01";
+            //ellogin user recibe 3 parametros uno es un string , el formualario y el token
     dispatch(loginUser("google", formGoogle, Token));
   };
+
+  //si es failure lo de google 
   const responseGoogleFailure = (response) => {
     console.log(response);
   };
+
+
+  //return 
   return (
     <Box className="Form">
       <Typography
@@ -54,6 +66,7 @@ function FormLogin({ handleChange, handleBlur, handleSubmits, form, errors }) {
       >
         Acceder
       </Typography>
+      {/* componente input */}
       <EmailInput
         handleChange={handleChange}
         handleBlur={handleBlur}
@@ -66,6 +79,8 @@ function FormLogin({ handleChange, handleBlur, handleSubmits, form, errors }) {
           {errors.email}
         </Alert>
       ) : null}
+
+      {/* componente password */}
       <PasswordInput
         handleChange={handleChange}
         handleBlur={handleBlur}
@@ -94,6 +109,9 @@ function FormLogin({ handleChange, handleBlur, handleSubmits, form, errors }) {
         >
           Acceder
         </Button>
+
+
+        {/* esto es un compononente de react-google-login */}
         <GoogleLogin
           clientId={clientId}
           buttonText="Login"

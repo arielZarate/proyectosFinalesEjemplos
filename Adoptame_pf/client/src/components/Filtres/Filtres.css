@@ -1,0 +1,68 @@
+
+/* .container {
+    display: 'flex';
+    flex-direction: 'row';
+.FiltreClass {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: '30px';
+    min-height: 100vh;
+    flex-grow: 1;
+}
+.color_title{
+    color: #0277bd;
+
+}
+
+ */
+
+
+ .container {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     /* Modificado para que los elementos se envuelvan en filas nuevas */
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+     /* Agregado un padding para separar los elementos del borde de la ventana */
+ }
+
+ .color_title {
+     color: #0277bd;
+ }
+
+ @media (max-width: 768px) {
+
+ }
+ */
+
+
+ .container {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     /* Modificado para que los elementos se envuelvan en filas nuevas */
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+     /* Agregado un padding para separar los elementos del borde de la ventana */
+ }
+
+ .color_title {
+     color: #0277bd;
+ }
+
+ @media (max-width: 768px) {
+
+     /* Estilos adicionales para pantallas con un ancho máximo de 768px */
+     .container {
+         flex-direction: column;
+         /* Cambiar a una dirección de columna para que los elementos se apilen verticalmente */
+         padding: 5px;
+         /* Reducir el padding para que los elementos se ajusten mejor en la pantalla */
+     }
+ }

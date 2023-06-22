@@ -1,0 +1,11 @@
+.containerCardPet{
+    margin:0.5rem;
+}
+
+.containerText{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

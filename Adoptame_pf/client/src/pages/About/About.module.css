@@ -1,0 +1,52 @@
+.color{
+    height: 100%;
+    width: 100%;
+    color:black;
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+}
+.color .recuadro {
+	border-radius: 8px; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	
+	background: #f7f4f4;
+    width:80%;
+    justify-content: center;
+    
+}
+
+ul {
+    list-style-type:square;
+    text-align: start;
+    padding: 25px;
+}
+
+li {
+    padding: 10px;
+}
+
+h1 {
+    padding-bottom: 30px;
+    text-decoration-line: underline;
+}
+
+h2 {
+    padding-top: 15px;
+    text-align: start;
+    text-decoration-line: underline;
+    border-top-style: solid;
+    border-width: 0.5px;
+}
+
+.color .recuadro .aboutUs {
+    text-align: justify;
+    padding-bottom: 25px;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+}
+.imgAbout{
+    padding-bottom: 15px;
+    padding-top: 15px;        
+}

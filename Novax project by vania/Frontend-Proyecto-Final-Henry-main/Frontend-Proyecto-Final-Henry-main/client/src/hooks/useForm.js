@@ -5,6 +5,10 @@ import Swal from "sweetalert2";
 import { loginUser } from "../Redux/Thunks/loginUsers";
 import { RegisterUser } from "../Redux/Thunks/register";
 
+
+
+
+//aca inicia el useForm
 export const useForm = (initialForm, validateForm, localeErrors) => {
   const dispatch = useDispatch();
   const [form, setForm] = useState(initialForm);
@@ -31,6 +35,8 @@ export const useForm = (initialForm, validateForm, localeErrors) => {
         setErrors({ ...errors, verifypassword: "The passwords not match" });
       }
     }
+
+    //destructura del e.target
     const { name, value } = e.target;
     setForm({
       ...form,
@@ -38,6 +44,8 @@ export const useForm = (initialForm, validateForm, localeErrors) => {
     });
   };
 
+
+  //evento handleBlur
   const handleBlur = (e) => {
     handleChange(e);
     setErrors({
@@ -47,6 +55,9 @@ export const useForm = (initialForm, validateForm, localeErrors) => {
     console.log(errors);
   };
 
+
+
+  //para el Registro 
   const handleSubmit = (e) => {
     // console.log(errors, form);
     if (
@@ -92,6 +103,10 @@ export const useForm = (initialForm, validateForm, localeErrors) => {
       });
     }
   };
+
+
+
+  //para el login
 
   const handleSubmits = (e) => {
     if (

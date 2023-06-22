@@ -1,0 +1,39 @@
+
+
+
+.container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: '30px';
+    min-height: 100vh;
+    flex-grow: 1;
+    max-width: '500px';
+   
+
+}
+
+.containerCard{
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left:10px;
+    background-color:darkgray;
+    color:white;
+}
+.title{
+     display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;  
+    padding-bottom: 30px;
+   font-size: x-large;
+
+}
+
+ .colorText{
+    color:#01579b;
+   
+ }

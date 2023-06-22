@@ -11,10 +11,18 @@ import { Box, Button } from "@mui/material";
 //import { Redirect } from "react-router-dom";
 import { setIsLog, setUserName } from "../../Redux/Slices";
 import { useForm } from "../../hooks/useForm";
+
+//validaciones deben ir en un tipo middleware
 import validationsForm from "../../utils/ValidationForm";
+
+//esto debo verlo no se para que esta 
 import Nav from "../LandingPage/nav/Nav";
+
+//importacion del formLogin de la carpeta formLogin
 import FormLogin from "./formLogin/FormLogin";
+
 import Loading from "../Loading/Loading";
+
 import { Navigate } from "react-router-dom";
 
 const Login = () => {
@@ -36,6 +44,9 @@ const Login = () => {
 
   const mode = useSelector((state) => state.theme.mode);
   const Theme = useSelector((state) => state.theme);
+
+
+  // useForm viene del hook que tiene todas las acciones
   const {
     form,
     errors,
@@ -47,16 +58,27 @@ const Login = () => {
     image,
     previewUrl,
   } = useForm(initialForm, validationsForm);
+
+
+  //use dispacth
   const dispatch = useDispatch();
+
+  //useDispatch
   useEffect(() => {
-    console.log(JSON.parse(localStorage.getItem("token")));
+    console.log(JSON.parse(localStorage.getItem("token"))); //muestra por consola el token
+    //valida eltoken
     if (JSON.parse(localStorage.getItem("token")) !== null) {
       dispatch(setUserName(JSON.parse(localStorage.getItem("token")).userName));
       dispatch(setIsLog(JSON.parse(localStorage.getItem("token")).token));
     }
   });
+
+  //isLog & isLoading  se maneja en el redux
   const { isLog } = useSelector((store) => store.users);
   const isLoading = useSelector((store) => store.isLoading);
+
+
+  //return
   return (
     <div
       className="Login-container"

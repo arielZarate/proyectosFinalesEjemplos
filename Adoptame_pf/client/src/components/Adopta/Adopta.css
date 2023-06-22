@@ -1,0 +1,13 @@
+.formulario {
+	border-radius: 8px; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	min-width: 600px;
+	margin-top: 10%;
+	background: #f7f4f4;
+	padding: 20px;
+}
+.botonesAdopcion {
+	display: contents;
+	color: black;
+}

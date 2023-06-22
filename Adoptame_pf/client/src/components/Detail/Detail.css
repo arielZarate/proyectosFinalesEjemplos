@@ -1,0 +1,26 @@
+
+.containerDetail{
+    display: flex;
+    flex-flow: flex wrap;
+    justify-content:center;
+    align-items: center ;
+    margin-top: 1rem;
+    height:100vh;}
+
+
+.detail_container{
+   border: 2px solid black;
+    border-radius: 10px;}
+
+
+
+ 
+.text{
+     font-size: 0.7rem;
+    font-family: cursive;
+     text-indent: 1rem; 
+   /* direction:ltr;
+    margin:3px; */
+
+}
+
