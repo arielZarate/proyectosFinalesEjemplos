@@ -1,7 +1,0 @@
- .styleContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 5rem;
-   /*  grid-template-columns: repeat(3, 1fr); */
-  }  
